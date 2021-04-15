@@ -1,4 +1,4 @@
-'	# Introdução à Ciência de Dados
+# Introdução à Ciência de Dados
 
 #### _Danilo Silva e Janderson Pereira_
 
