@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<prov:document xmlns="https://github.com/Murooo/introducao-ciencia-de-dados" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <prov:agent prov:id="Janderson"/>
+  <prov:entity prov:id="Twitter Database">
+    <prov:type xsi:type="xsd:string">SQL Database</prov:type>
+    <content>Tweets contendo termos relacionados às eleições brasileiras de 2020</content>
+    <creator>Janderson</creator>
+  </prov:entity>
+  <prov:wasGeneratedBy>
+    <prov:entity prov:ref="Twitter Database"/>
+    <prov:activity prov:ref="Janderson"/>
+  </prov:wasGeneratedBy>
+  <prov:activity prov:id="Exclusão de tweets em línguas entrangeiras">
+    <prov:type xsi:type="xsd:string">edit</prov:type>
+  </prov:activity>
+  <prov:wasGeneratedBy>
+    <prov:entity prov:ref="Exclusão de tweets em línguas entrangeiras"/>
+    <prov:activity prov:ref="Janderson"/>
+  </prov:wasGeneratedBy>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="Exclusão de tweets em línguas entrangeiras"/>
+    <prov:usedEntity prov:ref="Twitter Database"/>
+  </prov:wasDerivedFrom>
+  <prov:agent prov:id="Danilo"/>
+  <prov:entity prov:id="Contagem Diária">
+    <prov:type xsi:type="xsd:string">PNG Graph</prov:type>
+    <content>Volume de publicações por dia</content>
+    <creator>Danilo</creator>
+  </prov:entity>
+  <prov:wasGeneratedBy>
+    <prov:entity prov:ref="Contagem Diária"/>
+    <prov:activity prov:ref="Danilo"/>
+  </prov:wasGeneratedBy>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="Contagem Diária"/>
+    <prov:usedEntity prov:ref="Twitter Database"/>
+  </prov:wasDerivedFrom>
+  <prov:entity prov:id="Grafo de Retweets">
+    <prov:type xsi:type="xsd:string">Edges List</prov:type>
+    <content>Lista de arestas contendo as relações de retweets e seus pesos</content>
+    <creator>Janderson</creator>
+  </prov:entity>
+  <prov:wasGeneratedBy>
+    <prov:entity prov:ref="Grafo de Retweets"/>
+    <prov:activity prov:ref="Janderson"/>
+  </prov:wasGeneratedBy>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="Grafo de Retweets"/>
+    <prov:usedEntity prov:ref="Twitter Database"/>
+  </prov:wasDerivedFrom>
+  <prov:entity prov:id="Clusterização dos Nós">
+    <prov:type xsi:type="xsd:string">Clustering</prov:type>
+    <content>Separação dos nós do grafo em clusters</content>
+    <creator>Danilo</creator>
+  </prov:entity>
+  <prov:wasGeneratedBy>
+    <prov:entity prov:ref="Clusterização dos Nós"/>
+    <prov:activity prov:ref="Danilo"/>
+  </prov:wasGeneratedBy>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="Clusterização dos Nós"/>
+    <prov:usedEntity prov:ref="Grafo de Retweets"/>
+  </prov:wasDerivedFrom>
+  <prov:wasAssociatedWith>
+    <prov:activity prov:ref="Clusterização dos Nós"/>
+    <prov:agent prov:ref="Twitter Database"/>
+  </prov:wasAssociatedWith>
+  <prov:activity prov:id="Exclusão de clusters não ligados às eleilçoes">
+    <prov:type xsi:type="xsd:string">edit</prov:type>
+  </prov:activity>
+  <prov:wasGeneratedBy>
+    <prov:entity prov:ref="Exclusão de clusters não ligados às eleilçoes"/>
+    <prov:activity prov:ref="Danilo"/>
+  </prov:wasGeneratedBy>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="Exclusão de clusters não ligados às eleilçoes"/>
+    <prov:usedEntity prov:ref="Twitter Database"/>
+  </prov:wasDerivedFrom>
+  <prov:entity prov:id="Nós e Interações por Cluster">
+    <prov:type xsi:type="xsd:string">PNG Graph</prov:type>
+    <content>Volume de nós e interações por cluster</content>
+    <creator>Danilo</creator>
+  </prov:entity>
+  <prov:wasGeneratedBy>
+    <prov:entity prov:ref="Nós e Interações por Cluster"/>
+    <prov:activity prov:ref="Danilo"/>
+  </prov:wasGeneratedBy>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="Nós e Interações por Cluster"/>
+    <prov:usedEntity prov:ref="Twitter Database"/>
+  </prov:wasDerivedFrom>
+  <prov:entity prov:id="Principais Nós por Cluster">
+    <prov:type xsi:type="xsd:string">PNG Graph</prov:type>
+    <content>Nós com maior grau de entrada em cada um dos clusters</content>
+    <creator>Danilo</creator>
+  </prov:entity>
+  <prov:wasGeneratedBy>
+    <prov:entity prov:ref="Principais Nós por Cluster"/>
+    <prov:activity prov:ref="Danilo"/>
+  </prov:wasGeneratedBy>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="Principais Nós por Cluster"/>
+    <prov:usedEntity prov:ref="Twitter Database"/>
+  </prov:wasDerivedFrom>
+  <prov:entity prov:id="Interações entre clusters">
+    <prov:type xsi:type="xsd:string">PNG Graph</prov:type>
+    <content>Proporção de Interações intra e entre clusters</content>
+    <creator>Danilo</creator>
+  </prov:entity>
+  <prov:wasGeneratedBy>
+    <prov:entity prov:ref="Interações entre clusters"/>
+    <prov:activity prov:ref="Danilo"/>
+  </prov:wasGeneratedBy>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="Interações entre clusters"/>
+    <prov:usedEntity prov:ref="Twitter Database"/>
+  </prov:wasDerivedFrom>
+  <prov:entity prov:id="Interações no tempo">
+    <prov:type xsi:type="xsd:string">PNG Graph</prov:type>
+    <content>Proporção de Interações entre clusters ao longo do tempo</content>
+    <creator>Danilo</creator>
+  </prov:entity>
+  <prov:wasGeneratedBy>
+    <prov:entity prov:ref="Interações no tempo"/>
+    <prov:activity prov:ref="Danilo"/>
+  </prov:wasGeneratedBy>
+  <prov:wasDerivedFrom>
+    <prov:generatedEntity prov:ref="Interações no tempo"/>
+    <prov:usedEntity prov:ref="Twitter Database"/>
+  </prov:wasDerivedFrom>
+</prov:document>
